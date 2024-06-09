@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\kain;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class kainController extends Controller
@@ -97,5 +98,11 @@ class kainController extends Controller
         $kain->delete();
         return redirect('/kain');
 
+    }
+    public function cetak()
+    {
+        $kain = kain::all();
+        $pdf = Pdf::loadview('kain.kain-cetak', compact('kain'));
+        return $pdf->download('laporan-kain.pdf');
     }
 }

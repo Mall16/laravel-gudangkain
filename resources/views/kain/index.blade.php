@@ -7,6 +7,7 @@ Kain | Gudang Kain
 @section('content')
 <h3>Data Kain</h3>
 <a class="tambah" href="/kain/tambah">Tambah</a>
+<a class="tambah" href="/kain/cetak" style="margin-left: 10px;">Cetak Report</a>
 <table class="table-data">
   <thead>
     <tr>

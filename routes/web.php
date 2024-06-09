@@ -22,3 +22,5 @@ Route::put('/kain/update/{id}', [kainController::class, 'update']);
 Route::get('/kain/hapus/{id}', [kainController::class, 'delete']);
 Route::get('/kain/destroy/{id}', [kainController::class, 'destroy']);
 
+Route::get('/kain/cetak', [kainController::class, 'cetak']);
+
